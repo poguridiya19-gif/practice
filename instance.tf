@@ -15,19 +15,8 @@ terraform {
       version = "6.18.0"
     }
   }
-
-  backend "s3" {
-    bucket = "remote-state-poguri"
-    key = "docker"
-    region = "us-east-1"
-    use_lockfile = true
-    encrypt =  true
-  }
-  }
-
-
+}
 provider "aws" {
   region = "us-east-1"
-}
-   
+} 
    
