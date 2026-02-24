@@ -1,0 +1,10 @@
+# Terraform generated files
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+*.tfvars
+
+# OS / Editor
+.DS_Store
+*.log
