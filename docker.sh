@@ -5,7 +5,7 @@ sudo lvextend -L +30G /dev/mapper/Root VG -VarVol
 sudo xfs -growfs /var
 
 ## install docker
-sudo dnf -y install dnf -plugins-core
+sudo dnf install -y dnf-plugins-core
 sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
 sudo docker-builds-plugin
 sudo systemctl start docker

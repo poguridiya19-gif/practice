@@ -1,3 +1,16 @@
+provider "aws" {
+  region = "us-east-1"
+} 
+
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = "6.33.0"
+    }
+  }
+}
+
 resource "aws_instance" "docker" {
     ami                  = "ami-0220d79f3f480ecf5"
     instance_type          = "t3.micro"
@@ -7,16 +20,4 @@ resource "aws_instance" "docker" {
         Name =  "docker"
     }
 }
-   
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "6.18.0"
-    }
-  }
-}
-provider "aws" {
-  region = "us-east-1"
-} 
    
