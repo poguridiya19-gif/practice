@@ -1,8 +1,8 @@
 #!/bin/bash
 ## extend volume 
-sudo growpart /dev/nvme0n1 4
-sudo lvextend -L +30G /dev/mapper/Root VG -VarVol
-sudo xfs -growfs /var
+sudo lvextend -l +100%FREE /dev/mapper/RootVG-varVol
+sudo xfs_growfs /var
+df -h /var
 
 ## install docker
 sudo dnf install -y dnf-plugins-core
